@@ -168,7 +168,9 @@ $(document).ready(function() {
         top: 0
       });
       slogan2.removeClass("visible");
-      drag.showControl();
+      if(drag){
+        drag.showControl();
+      }
     }
 
     function returnToStart(){
