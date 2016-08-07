@@ -18044,7 +18044,7 @@ $(document).ready(function() {
   function videoPlayOnDrag(){
     var s = Snap("#canvas");
     // var s = Snap("#parashut");
-    var parashut = Snap.load("../img/svg/action.svg", function ( loadedFragment ) {
+    var parashut = Snap.load("img/svg/action.svg", function ( loadedFragment ) {
       s.append( loadedFragment );
       callback();
     });
@@ -18077,7 +18077,9 @@ $(document).ready(function() {
         top: 0
       });
       slogan2.removeClass("visible");
-      drag.showControl();
+      if(drag){
+        drag.showControl();
+      }
     }
 
     function returnToStart(){
