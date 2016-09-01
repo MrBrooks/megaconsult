@@ -36,7 +36,7 @@ if ($_POST) {
   class TEmail {
     public $from_email;
     public $from_name;
-    public $to_email;
+    public $to_emails;
     public $to_name;
     public $subject;
     public $data_charset='UTF-8';
@@ -47,7 +47,7 @@ if ($_POST) {
     function send(){
       $dc=$this->data_charset;
       $sc=$this->send_charset;
-      $enc_to=mime_header_encode($this->to_name,$dc,$sc).' <'.$this->to_email.'>';
+      $enc_to=implode(', '$this->to_emails);
       $enc_subject=mime_header_encode($this->subject,$dc,$sc);
       $enc_from=mime_header_encode($this->from_name,$dc,$sc).' <'.$this->from_email.'>';
       $enc_body=$dc==$sc?$this->body:iconv($dc,$sc.'//IGNORE',$this->body);
@@ -63,16 +63,16 @@ if ($_POST) {
   switch($id){
     case "call-back":
       $emailgo->from_email = 'callback@megaconsult.ru';
-      $emailgo->from_name = 'callback';
-      $emailgo->to_email = 'kulikov@mbrooks.ru';
+      $emailgo->from_name = 'Call Back';
+      $emailgo->to_emails = 'kulikov@mbrooks.ru altingfest@gmail.com';
       $emailgo->to_name = "Call back";
       $emailgo->subject = 'Заявка на звонок';
       $emailgo->body = "Заявка на звонок\r\n Имя : ".$name."\r\n Телефон : ".$phone."\r\n";
       break;
     case "subscribe":
       $emailgo->from_email = 'subscribe@megaconsult.ru';
-      $emailgo->from_name = 'subscribe';
-      $emailgo->to_email = 'kulikov@mbrooks.ru';
+      $emailgo->from_name = 'Subscribe';
+      $emailgo->to_emails = 'kulikov@mbrooks.ru altingfest@gmail.com';
       $emailgo->to_name = "Subscribe";
       $emailgo->subject = 'Заявка на подписку';
       $emailgo->body = "Заявка на подписку\r\n Email : ".$email;

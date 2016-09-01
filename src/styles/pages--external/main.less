@@ -42,6 +42,7 @@ header{
     right: 30px;
     font-size: 24px;
     font-family: "Intro";
+    color: #fff;
     @media screen and (max-width: @mobile){
       position: initial;
       margin-top: 20px;
@@ -87,6 +88,19 @@ input{
     outline: none;
     box-shadow: none;
   }
+}
+.noscroll{
+  overflow: hidden;
+  @media screen and (max-width: @mobile){
+    overflow: initial;
+  }
+}
+#tonner{
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  background-color: rgba(68, 161, 215, 0.59);
+  z-index: -1;
 }
 .nopadding{
   padding: 0;
@@ -251,6 +265,8 @@ h4{
   }
   #pulldown,#pulldown-arrow{
     transition: all 500ms;
+    font-size: 18px;
+    font-weight: 700;
   }
   #pulldown,#start-animation, #start-video{
     @media screen and (max-width: @mobile){
@@ -341,10 +357,10 @@ h4{
       margin: auto;
     }
   }
-  .btn{
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
+  // .callback-form{
+  //   margin-top: 30px;
+  //   margin-bottom: 30px;
+  // }
 }
 
 
@@ -408,6 +424,16 @@ h4{
       margin: auto;
     }
   }
+  @media screen and (max-width: @mobile){
+    .callback-form{
+      width: 100%;
+      margin: auto;
+      text-align: center;
+    }
+    .field-group{
+      margin-bottom: 5px;
+    }
+  }
   label{
     padding-left: 30px;
     cursor: pointer;
@@ -426,10 +452,10 @@ h4{
       line-height: 25px;
     }
   }
-  .btn{
-    margin-top: 20px;
-    width: 100%;
-  }
+  // .btn{
+  //   margin-top: 20px;
+  //   width: 100%;
+  // }
 }
 #comments{
   text-align: center;
@@ -472,9 +498,9 @@ h4{
       z-index: 0;
     }
   }
-  .btn{
-    margin: 34px auto;
-  }
+  // .btn{
+  //   margin: 34px auto;
+  // }
 }
 #contacts{
   text-align: center;
@@ -540,6 +566,7 @@ h4{
     height: 100%;
     @media screen and (max-width: @mobile){
       order: 1;
+      height: 300px;
     }
   }
   .map-block{
@@ -547,6 +574,12 @@ h4{
       height: 450px;
       &:first-child{
         padding: 0;
+        @media screen and (max-width: @mobile){
+          order: 2;
+        }
+      }
+      @media screen and (max-width: @mobile){
+        height: auto;
       }
     }
     @media screen and (max-width: @mobile){
@@ -716,7 +749,39 @@ input[type="radio"]{
   height: 100%;
   width: 100%;
   @media screen and (max-width: @mobile){
-    max-width: 300px;
+    max-height: 300px;
+  }
+}
+.callback-form{
+  font-size: 0;
+  &--black{
+
+    &.callback-form input[type="text"]{
+      border: 2px solid @black;
+    }
+  }
+  input{
+    vertical-align: top;
+    width: 250px;
+    box-shadow: 3.36px 4.97px 10px 0 rgba(0,0,0,.14);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @media screen and (max-width: @mobile){
+      margin-bottom: 15px;
+    }
+  }
+  input[type="submit"]{
+    @media screen and (max-width: @mobile){
+      margin-top: 15px;
+    }
+  }
+  input[type="text"]{
+    font-size: 15px;
+    height: 44px;
+    border: 2px solid @yellow;
+    padding-left: 25px;
+    padding-right: 25px;
+    letter-spacing: 1px;
   }
 }
 
