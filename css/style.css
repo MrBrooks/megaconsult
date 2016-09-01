@@ -8,7 +8,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import '../../bower_components/fullpage.js/jquery.fullPage.css';
 html
 {
     font-family: sans-serif;
@@ -4412,6 +4411,8 @@ header .phone
     position: absolute;
     top: 35px;
     right: 30px;
+
+    color: #fff;
 }
 @media screen and (max-width: 768px)
 {
@@ -4476,6 +4477,27 @@ input:active
 {
     outline: none;
     box-shadow: none;
+}
+.noscroll
+{
+    overflow: hidden;
+}
+@media screen and (max-width: 768px)
+{
+    .noscroll
+    {
+        overflow: initial;
+    }
+}
+#tonner
+{
+    position: absolute;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(68, 161, 215, .59);
 }
 .nopadding
 {
@@ -4719,6 +4741,9 @@ h4
 #start #pulldown,
 #start #pulldown-arrow
 {
+    font-size: 18px;
+    font-weight: 700;
+
     -webkit-transition: all 500ms;
             transition: all 500ms;
 }
@@ -4853,11 +4878,6 @@ h4
 {
     margin: auto;
 }
-#pluses .btn
-{
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
 #principles
 {
     padding: 70px 30px 100px;
@@ -4952,6 +4972,20 @@ h4
         text-align: left;
     }
 }
+@media screen and (max-width: 768px)
+{
+    #calc .callback-form
+    {
+        width: 100%;
+        margin: auto;
+
+        text-align: center;
+    }
+    #calc .field-group
+    {
+        margin-bottom: 5px;
+    }
+}
 #calc label
 {
     padding-left: 30px;
@@ -4978,11 +5012,6 @@ h4
     line-height: 25px;
 
     display: block;
-}
-#calc .btn
-{
-    width: 100%;
-    margin-top: 20px;
 }
 #comments
 {
@@ -5049,10 +5078,6 @@ h4
             transform: scale(.6, 1) rotate(45deg);
 
     background-color: white;
-}
-#comments .btn
-{
-    margin: 34px auto;
 }
 #contacts
 {
@@ -5165,6 +5190,8 @@ h4
 {
     #contacts #google-map
     {
+        height: 300px;
+
         -webkit-box-ordinal-group: 2;
         -webkit-order: 1;
         -ms-flex-order: 1;
@@ -5178,6 +5205,23 @@ h4
 #contacts .map-block > div:first-child
 {
     padding: 0;
+}
+@media screen and (max-width: 768px)
+{
+    #contacts .map-block > div:first-child
+    {
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+                order: 2;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    #contacts .map-block > div
+    {
+        height: auto;
+    }
 }
 @media screen and (max-width: 768px)
 {
@@ -5424,6 +5468,411 @@ input[type='radio']:checked:after
 {
     #google-map
     {
-        max-width: 300px;
+        max-height: 300px;
     }
+}
+.callback-form
+{
+    font-size: 0;
+}
+.callback-form--black.callback-form input[type='text']
+{
+    border: 2px solid #322525;
+}
+.callback-form input
+{
+    width: 250px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    vertical-align: top;
+
+    box-shadow: 3.36px 4.97px 10px 0 rgba(0, 0, 0, .14);
+}
+@media screen and (max-width: 768px)
+{
+    .callback-form input
+    {
+        margin-bottom: 15px;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .callback-form input[type='submit']
+    {
+        margin-top: 15px;
+    }
+}
+.callback-form input[type='text']
+{
+    font-size: 15px;
+
+    height: 44px;
+    padding-right: 25px;
+    padding-left: 25px;
+
+    letter-spacing: 1px;
+
+    border: 2px solid #fdca00;
+}
+.service-page section
+{
+    font-size: 16px;
+    font-weight: 300;
+
+    padding: 70px 0 115px;
+
+    text-align: center;
+    letter-spacing: 1px;
+
+    color: #545454;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+@media screen and (max-width: 768px)
+{
+    .service-page section
+    {
+        padding: 30px 5px;
+    }
+}
+.service-page h1
+{
+    font-size: 44px;
+
+    margin-top: 0;
+    margin-bottom: 40px;
+
+    text-transform: uppercase;
+
+    color: #fdca00;
+}
+@media screen and (max-width: 768px)
+{
+    .service-page h1
+    {
+        font-size: 25px;
+
+        margin-bottom: 20px;
+    }
+}
+.service-page h2
+{
+    font-size: 32px;
+
+    margin-top: 0;
+    margin-bottom: 60px;
+
+    text-transform: uppercase;
+
+    color: #44a1d7;
+}
+@media screen and (max-width: 768px)
+{
+    .service-page h2
+    {
+        font-size: 25px;
+
+        margin-bottom: 25px;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .service-page br
+    {
+        display: none;
+    }
+}
+.service-page .start-block
+{
+    padding: 140px 0 190px;
+
+    color: white;
+    background-image: url(http://placehold.it/1920x800);
+}
+.service-page .start-block .descr
+{
+    text-align: center;
+}
+@media screen and (max-width: 768px)
+{
+    .service-page .start-block
+    {
+        padding: 100px 0 80px;
+    }
+}
+.service-page .forwhom-block
+{
+    font-weight: 700;
+}
+.service-page .price-block h2
+{
+    margin-bottom: 0;
+}
+@media screen and (max-width: 768px)
+{
+    .service-page .price-block h2
+    {
+        margin-bottom: 30px;
+    }
+}
+.service-page .price-block .price
+{
+    font-size: 32px;
+    font-weight: 700;
+
+    color: black;
+}
+@media screen and (max-width: 768px)
+{
+    .service-page .price-block
+    {
+        padding: 70px 0;
+    }
+}
+.service-page .consultation-block
+{
+    padding: 165px 0 210px;
+
+    background-image: url(http://placehold.it/1920x800);
+}
+.service-page .consultation-block h2
+{
+    color: white;
+}
+@media screen and (max-width: 768px)
+{
+    .service-page .consultation-block
+    {
+        padding: 100px 0;
+    }
+}
+.service-page .meeting1-block
+{
+    padding-bottom: 60px;
+}
+.service-page .meeting1-block h2
+{
+    margin-bottom: 30px;
+}
+.service-page .meeting1-block .descr
+{
+    margin-bottom: 60px;
+
+    text-align: center;
+}
+@media screen and (max-width: 768px)
+{
+    .service-page .meeting1-block .descr
+    {
+        margin-bottom: 40px;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .service-page .callback-form input
+    {
+        margin-top: 0;
+    }
+}
+.service-page .article-block
+{
+    padding: 0 35px;
+}
+.service-page .article-block .article
+{
+    padding: 80px 75px;
+
+    text-align: left;
+
+    background-color: white;
+}
+.service-page .article-block .descr
+{
+    padding-right: 30%;
+}
+.service-page .article-block h2,
+.service-page .article-block h3
+{
+    margin-bottom: 24px;
+}
+.service-page .article-block .btn
+{
+    float: right;
+
+    max-width: 220px;
+}
+@media screen and (max-width: 768px)
+{
+    .service-page .article-block
+    {
+        display: none;
+    }
+}
+.service-page .slogan-block
+{
+    padding: 25px 35px;
+
+    color: #fff;
+}
+.service-page .slogan-block > div
+{
+    padding: 140px 0 170px;
+
+    background-image: url(http://placehold.it/1920x800);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+@media screen and (max-width: 768px)
+{
+    .service-page .slogan-block > div
+    {
+        padding: 75px 0 60px;
+    }
+}
+.service-page .slogan-block h2
+{
+    margin-bottom: 30px;
+
+    color: #fdca00;
+}
+.service-page .slogan-block .descr
+{
+    text-align: center;
+
+    color: #fff;
+}
+@media screen and (max-width: 768px)
+{
+    .service-page .slogan-block
+    {
+        padding: 0;
+    }
+}
+.service-page #calc
+{
+    padding: 25px 35px;
+}
+.service-page #calc > div
+{
+    padding: 60px 80px;
+
+    background-color: #fff;
+}
+@media screen and (max-width: 768px)
+{
+    .service-page #calc > div
+    {
+        padding: 60px 0;
+
+        text-align: center;
+
+        background-color: transparent;
+    }
+}
+.service-page #calc h2 span
+{
+    text-decoration: underline;
+}
+@media screen and (max-width: 768px)
+{
+    .service-page #calc
+    {
+        padding: 0;
+    }
+}
+.service-page .meeting2-block
+{
+    padding-top: 70px;
+    padding-top: 75px;
+}
+.service-page .meeting2-block h2
+{
+    margin-bottom: 40px;
+}
+.service-page .section--gray
+{
+    color: #545454;
+    background-color: #eee;
+}
+.service-page .section--light
+{
+    background-color: #fff;
+}
+.service-page .section--yellow
+{
+    background-color: #fdca00;
+}
+.service-page .section--yellow h2
+{
+    color: black;
+}
+.service-page .descr
+{
+    text-align: left;
+}
+.flex-row
+{
+    display: -webkit-inline-flex;
+    display:    -moz-inline-flex;
+    display:     -ms-inline-flex;
+    display:      -o-inline-flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display:         inline-flex;
+
+    width: 100%;
+
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+}
+.flex-row .item
+{
+    width: 25%;
+    margin: 30px 0;
+}
+@media screen and (max-width: 768px)
+{
+    .flex-row .item
+    {
+        font-size: 12px;
+
+        width: 50%;
+    }
+    .booking-block .flex-row .item
+    {
+        font-size: 14px;
+    }
+}
+.flex-row .item .descr
+{
+    text-align: center;
+}
+@media screen and (max-width: 768px)
+{
+    .flex-row .item .descr
+    {
+        padding: 0 5px;
+    }
+}
+.flex-row .item .icon
+{
+    margin-bottom: 20px;
+}
+footer
+{
+    color: #545454;
+    background: #eee;
+}
+footer .phone,
+footer .email
+{
+    font-weight: 700;
 }

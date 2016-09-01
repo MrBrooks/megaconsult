@@ -17944,8 +17944,10 @@ $(document).ready(function() {
       clearTimeout(timer);
       timer = setTimeout(function(){
         // console.log(event);
-        for(var i = 0; i < opts[event.data].actions.length; i++){
-          opts[event.data].actions[i]();
+        if(event.data !== null){
+          for(var i = 0; i < opts[event.data].actions.length; i++){
+            opts[event.data].actions[i]();
+          }
         }
         //do smthng
       },50);
@@ -17989,7 +17991,7 @@ $(document).ready(function() {
 
     var select = $(opt.selector);
     var items = [];
-    var H = $(window).height();
+    var H = $(window).height(), if_mobile = $(window).width() < 768? true : false;
 
     
     function isHidden(elem){
@@ -18037,8 +18039,11 @@ $(document).ready(function() {
         }
       }
     };
-
     self.updateItems();
+
+    if(if_mobile){
+      select.addClass(opt.visible);
+    }
   }
 
   function videoPlayOnDrag(){
@@ -18052,7 +18057,8 @@ $(document).ready(function() {
     var video = document.getElementById("start-video");
     video.addEventListener("ended", scrollDown);
     var slogan1 = $("#slogan-1, #pulldown,#pulldown-arrow"),
-        slogan2 = $("#slogan-2");
+        slogan2 = $("#slogan-2"),
+        tonner = $("#tonner");
 
     function callback(){
       ring = s.select("#ring");
@@ -18065,9 +18071,15 @@ $(document).ready(function() {
       // console.log("scrollDown");
       video.currentTime = 0;
       $(video).hide();
-      $("html, body").animate({
-        scrollTop: $(window).height()
-      },500, restart);
+      if($(window).scrollTop() < 10){
+        $("html, body").animate({
+          scrollTop: $(window).height()
+        },750, restart);
+      }
+      // $("body").removeClass("noscroll");
+      tonner.css({
+        opacity: 1
+      });
     }
 
     function restart(){
@@ -18122,19 +18134,23 @@ $(document).ready(function() {
         var d = d2(dx,dy,0,0);
         // video.currentTime = d2(dx,dy,0,0)/100;
 
-        if(d < 20){
+        // if(d < 20){
           slogan1.css({
             opacity: Math.max(1 - d/18, 0),
             top: 100*Math.max(d/18, 0)
           });
+          tonner.css({
+            opacity: Math.max(1 - d/18, 0)
+          });
           // console.log("More!");
-        } else{
+        // } else{
           // console.log("Enough!");
-        }
+        // }
       };
       self.start = function() {
         this.data('origTransform', this.transform().local );
         startBBox = this.getBBox();
+        yaCounter38125720.reachGoal('Кнопка №10');
       };
 
       self.stop = function() {
@@ -18153,7 +18169,7 @@ $(document).ready(function() {
           }, 500);
           setTimeout(function(){
             slogan2.addClass("visible");
-          },2000);
+          },1000);
         }
       };
 
@@ -18165,6 +18181,115 @@ $(document).ready(function() {
 
     }
   }
+  function initEcontentaEvent(){ //copy-paste from main site, sorry for this code
+
+    $(".zakaz_pixel").click(function(){
+      window.econtenta.track({
+        source: '8953b17',
+        action: 'service_booking'
+      });
+    });
+    $(".email-submit").click(function(){
+      window.econtenta.track({
+        source: '8953b17',
+        action: 'email_signup'
+      });
+    });
+
+    $(".vk").click(function(){
+      window.econtenta.track({
+        source: '8953b17',
+        action: 'go_vk'
+      });
+    });
+
+    $(".zakaz_pixel_confirmed").click(function(){
+      window.econtenta.track({
+        source: '8953b17',
+        action: 'service_booking_confirm'
+      });
+    });
+
+    $(".fb").click(function(){
+      window.econtenta.track({
+        source: '8953b17',
+        action: 'go_fb'
+      });
+    });
+
+    $(".no-pc-tel").click(function(){
+      window.econtenta.track({
+        source: '8953b17',
+        action: 'contact_phone'
+      });
+    });
+    // var scroll_full = false;
+    // $(window).on('scroll',function(event) {
+    //   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+    //     // scroll_full = true;
+    //     window.econtenta.track({
+    //       source: '8953b17',
+    //       action: 'page_scroll_full'
+    //     });
+    //     $( this ).off( event );
+    //   }
+    // });
+
+    // $(window).on('scroll',function(event) {
+    //   if($(window).scrollTop() >= parseInt($(document).height()/2)) {
+    //     window.econtenta.track({
+    //       source: '8953b17',
+    //       action: 'page_scroll_middle'
+    //     });
+    //     $( this ).off( event );
+    //   }
+    // });
+
+    setTimeout(function(){
+        window.econtenta.track({
+        source: '8953b17',
+        action: 'page_stay_4_min'
+    });
+    }, 240000);
+
+    $(window).on('beforeunload', function(){
+      window.econtenta.track({
+        source: '8953b17',
+        action: 'page_close'
+      });
+    });
+    window.onload = function() {
+      window.econtenta.track({
+        source: '8953b17',
+        action: 'page_view'
+      });
+    }
+    var full = false, half = false;
+    this.checkScrollConditions = function(){
+      var s = $(window).scrollTop(),
+          d = $(document).height(), 
+          h = $(window).height();
+      if (!full){
+        if(s + h > d-30) {
+          full=true;
+          window.econtenta.track({
+            source: '8953b17',
+            action: 'page_scroll_full'
+          });
+        }
+      }
+      if(!half){
+        if(s >= d/2) {
+          half=true;
+          window.econtenta.track({
+            source: '8953b17',
+            action: 'page_scroll_middle'
+          });
+        }
+      }
+    };
+  }
+  
 
   function Calculator(){
     var form = $("#calculator");
@@ -18185,9 +18310,10 @@ $(document).ready(function() {
   =====================================
   */
 
-  var anim_on_scroll = new AnimOnScroll();
+  // var anim_on_scroll = new AnimOnScroll();
   var full_height = new FullHeight();
   var video_play = new videoPlayOnDrag();
+  var econtenta_pixel = new initEcontentaEvent();
   /*
   =====================================
   INIT WINDOW UPDATER
@@ -18197,11 +18323,18 @@ $(document).ready(function() {
   var window_updater = new WindowUpdater([
     {
       event: "scroll",
-      actions: [anim_on_scroll.updateView, video_play.scrollControl]
+      actions: [
+        // anim_on_scroll.updateView,
+        video_play.scrollControl,
+        econtenta_pixel.checkScrollConditions
+      ]
     },
     {
       event: "resize",
-      actions: [anim_on_scroll.updateItems, full_height.update]
+      actions: [
+        // anim_on_scroll.updateItems,
+        full_height.update
+      ]
     }
   ]);
 
@@ -18213,19 +18346,25 @@ $(document).ready(function() {
 
   
 
+
+  
+
   /*
   =====================================
   OTHER CODE
   =====================================
   */
 
-  $("#phone").mask('+0 (000) 000-00-00');
+  $("input[name='phone']").mask('+0 (000) 000-00-00');
   var calc = new Calculator();
   $(window).trigger("scroll");
+  if($(window).scrollTop() > 5){
+    $('body').removeClass('noscroll');
+  }
 
-  $('#call-back').submit(function(){
+  $('.ajax-submit').submit(function(){
     var form = $(this), error = false;
-    var btn = form.find('input[type="submit"]');
+    var btn = form.find('[type="submit"]');
     
 
     form.find('.field-group>input').each( function(){
@@ -18246,19 +18385,19 @@ $(document).ready(function() {
          dataType: 'json',
          data: data, 
            beforeSend: function(data) { 
-              btn.text("Идет отправка...");
+              btn.val("Идет отправка...").text("Идет отправка...");
             },
            success: function(data){ 
             if (data['error']) { 
-              btn.text("Ошибка");
+              btn.val("Ошибка").text("Ошибка");
               btn.prop('disabled', false);
             } else {
-              btn.text("Отправлено");
+              btn.val("Отправлено").text("Отправлено");
               btn.prop('disabled', false);
             }
            },
            error: function (xhr, ajaxOptions, thrownError) {
-            btn.text("Ошибка");
+            btn.val("Ошибка");
             btn.prop('disabled', false);
             alert(xhr.status); 
             alert(xhr.responseText);
