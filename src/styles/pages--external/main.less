@@ -26,11 +26,13 @@ header{
   position: absolute;
   top: 0;
   width: 100%;
-  text-align: center;
+  // text-align: center;
   background-color: transparent;
-  padding-top: 22px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
   .logo{
-    margin: auto;
+    // margin: auto;
     span{
       text-transform: uppercase;
       color: white;
@@ -44,9 +46,13 @@ header{
     font-family: "Intro";
     color: #fff;
     @media screen and (max-width: @mobile){
-      position: initial;
-      margin-top: 20px;
+      // position: initial;
+      // margin-top: 20px;
+      display: none;
     }
+  }
+  @media screen and (max-width: @mobile){
+    padding: 10px;
   }
 }
 footer{
@@ -70,7 +76,7 @@ section{
   text-align: center;
   background-color: #fff;
   @media screen and (max-width: @mobile){
-    padding: 0;
+    padding: 10px;
   }
 }
 label{
@@ -213,30 +219,39 @@ h4{
 }
 
 /*======BLOCKS=======*/
-.backgroung-video {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  transform: translateX(-50%) translateY(-50%);
-}
+// .backgroung-video {
+//   position: fixed;
+//   top: 50%;
+//   left: 50%;
+//   min-width: 100%;
+//   min-height: 100%;
+//   width: auto;
+//   height: auto;
+//   z-index: -100;
+//   transform: translateX(-50%) translateY(-50%);
+// }
 
 #start{
   background-color: transparent;
+  position: relative;
+  color: #fff;
   &>div{
     // background: url(../img/images/photo.jpg);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    // height: 100vh;
     width: 100%;
   }
   svg{
     overflow: visible;
+  }
+  video{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
   #slogan-1,#slogan-2{
     // color: white;
@@ -264,6 +279,7 @@ h4{
     }
   }
   #pulldown,#pulldown-arrow{
+    font-family: 'Intro';
     transition: all 500ms;
     font-size: 18px;
     font-weight: 700;
@@ -284,6 +300,9 @@ h4{
       background-size: cover;
     }
   }
+  @media screen and (max-width: @mobile){
+    display: none;
+  }
 }
 #timetothink{
   padding-top: 30px;
@@ -294,11 +313,18 @@ h4{
   }
   &>div{
     background-color: @yellow;
-    padding-top: 115px;
-    padding-bottom: 10px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @media screen and (max-width: @mobile){
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
   }
   h2{
-    margin-bottom: 75px;
+    margin-bottom: 20px;
+    @media screen and (max-width: @mobile){
+      font-size: 20px;
+    }
   }
   .image{
     text-align: center;
@@ -310,11 +336,26 @@ h4{
     margin-bottom: 5px;
   }
   .btn{
-    margin-bottom: 75px;
+    // margin-bottom: 75px;
   }
+  .descr{
+    max-width: 45%;
+    margin: auto;
+    margin-bottom: 80px;
+    @media screen and (max-width: @mobile){
+      min-width: 99%;
+      margin-bottom: 50px;
+    }
+
+  }
+  .any-question .descr{
+    margin-bottom: 15px;
+  }
+
 }
 #pluses{
   text-align: center;
+  margin-bottom: 15px;
   h2{
     @media screen and (max-width: @mobile){
       margin: 20px 0 15px;
@@ -340,12 +381,20 @@ h4{
   }
   .title, .description{
     text-align: left;
-    min-height: 45px;
+    min-height: 65px;
+    @media screen and (max-width: @mobile){
+      text-align: center;
+      margin: auto;
+    }
   }
   .title{
-    text-align: center;
+    max-width: 55%;
+    @media screen and (max-width: @mobile){
+      max-width: 100%;
+    }
   }
   .description{
+    // min-height: 70px;
     @media screen and (max-width: @mobile){
       display: none;
     }
@@ -392,6 +441,11 @@ h4{
   // padding-top: 70px;
   // padding-bottom: 100px;
 }
+#calculator{
+  @media screen and (max-width: @mobile){
+    margin-bottom: 20px;
+  }
+}
 #calc{
   padding-top: 80px;
   padding-bottom: 50px;
@@ -416,6 +470,10 @@ h4{
     @media screen and (max-width: @mobile){
       display: none;
     }
+  }
+  .bg-yellow{
+    margin-left: -10px;
+    margin-right: -10px;
   }
   form{
     @media screen and (max-width: @mobile){
@@ -452,6 +510,11 @@ h4{
       line-height: 25px;
     }
   }
+  .carrot{
+    font-size: 16px;
+    text-align: center;
+    margin: 15px 0;
+  }
   // .btn{
   //   margin-top: 20px;
   //   width: 100%;
@@ -459,15 +522,21 @@ h4{
 }
 #comments{
   text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (max-width: @mobile){
+    padding: 0;
+  }
   h2{
     margin-bottom: 34px;
+    color: #fff;
   }
   .block{
-    background-color: @yellow;
+    background-color: @cyan;
     padding-top: 60px;
     padding-bottom: 100px;
     @media screen and (max-width: @mobile){
-      padding: 30px 0;
+      padding: 50px 0;
     }
   }
   .comment{
@@ -590,11 +659,12 @@ h4{
 }
 #goahead{
   padding: 50px 30px 40px;
-  background: url(../img/images/photo.jpg);
+  background-image: url(../img/images/photo.jpg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   @media screen and (max-width: @mobile){
+    background-image: none;
     padding: 30px 0;
     text-align: center;
     br{
@@ -762,10 +832,10 @@ input[type="radio"]{
   }
   input{
     vertical-align: top;
-    width: 250px;
+    width: 225px;
     box-shadow: 3.36px 4.97px 10px 0 rgba(0,0,0,.14);
-    margin-top: 30px;
-    margin-bottom: 30px;
+    // margin-top: 30px;
+    // margin-bottom: 30px;
     @media screen and (max-width: @mobile){
       margin-bottom: 15px;
     }
@@ -785,5 +855,146 @@ input[type="radio"]{
   }
 }
 
+/*
+==========================
+MAIN V2.0
+==========================
+*/
 
-
+h1,h2,h3,h4{
+  span{
+    text-decoration: underline;
+  }
+}
+.bg-yellow{
+  background-color: @yellow;
+}
+#start-banner{
+  text-align: left;
+  padding-top: 150px;
+  padding-bottom: 30px;
+  color: #fff;
+  &:extend(.full-bg);
+  h2:first-child{
+    margin-bottom: 50px;
+    @media screen and (max-width: @mobile){
+      margin-bottom: 30px;
+    }
+  }
+  .slogan{
+    margin-bottom: 30px;
+    @media screen and (max-width: @mobile){
+      margin-bottom: 100px;
+    }
+  }
+  .carrot{
+    background-color: @yellow;
+    color: @black;
+    width: 70%;
+    padding: 40px 0 40px 80px;
+    h3{
+      margin-bottom: 15px;
+      padding-right: 80px;
+      @media screen and (max-width: @mobile){
+        padding-right: 0;
+      }
+    }
+    .descr{
+      margin-bottom: 15px;
+      padding-right: 80px;
+      @media screen and (max-width: @mobile){
+        padding-right: 0;
+      }
+    }
+    @media screen and (max-width: @mobile){
+      width: 100%;
+      margin-left: -10px;
+      margin-right: -10px;
+      position: absolute;
+      text-align: center;
+      background-color: #fff;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  @media screen and (max-width: @mobile){
+    padding-top: 140px;
+    // padding-bottom: 100px;
+    margin-bottom: 320px;
+  }
+}
+#more-info{
+  padding: 40px 0 60px;
+  background-color: @yellow;
+  h3{
+    max-width: 40%;
+    margin: auto;
+    margin-bottom: 20px;
+    @media screen and (max-width: @mobile){
+      max-width: 99%;
+    }
+  }
+}
+#calc{
+  h2{
+    color: @black;
+  }
+  .bg-yellow{
+    padding: 150px 0 150px 80px;
+    @media screen and (max-width: @mobile){
+      padding: 30px 0;
+    }
+  }
+  .callback-form{
+    input{
+      width: 200px;
+      // letter-spacing: 0;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  form{
+    @media screen and (max-width: @mobile){
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (max-width: @mobile){
+    padding-bottom: 0;
+  }
+}
+#slogan-2{
+  &:extend(.full-bg);
+  padding: 130px 0 75px;
+  color: #fff;
+  h2{
+    margin-bottom: 40px;
+    @media screen and (max-width: @mobile){
+      margin-bottom: 30px;
+    }
+  }
+  h3{
+    margin-bottom: 20px;
+  }
+  .descr{
+    margin: auto;
+    max-width: 50%;
+    margin-bottom: 90px;
+    @media screen and (max-width: @mobile){
+      max-width: 95%;
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (max-width: @mobile){
+    padding: 60px 0 30px;
+  }
+}
+.socials{
+  @media screen and (max-width: @mobile){
+    text-align: center;
+    // margin-bottom: 0;
+    margin-top: 15px;
+  }
+  div{
+    display: inline-block;
+  }
+}

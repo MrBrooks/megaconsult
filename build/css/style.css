@@ -4076,6 +4076,20 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
 .retina-sprites(@retina-groups);
 */
+.svg-sprite--action
+{
+    width: 100px;
+    height: 200px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 406px 322px;
+}
+.no-svg .svg-sprite--action
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
 .svg-sprite--logo
 {
     width: 183px;
@@ -4083,8 +4097,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 331px 297px;
+    background-position: -100px 0;
+    background-size: 406px 322px;
 }
 .no-svg .svg-sprite--logo
 {
@@ -4097,8 +4111,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: 0 -52px;
-    background-size: 331px 297px;
+    background-position: -100px -52px;
+    background-size: 406px 322px;
 }
 .no-svg .svg-sprite--papers
 {
@@ -4111,8 +4125,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -183px 0;
-    background-size: 331px 297px;
+    background-position: -283px 0;
+    background-size: 406px 322px;
 }
 .no-svg .svg-sprite--document
 {
@@ -4125,8 +4139,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: 0 -175px;
-    background-size: 331px 297px;
+    background-position: 0 -200px;
+    background-size: 406px 322px;
 }
 .no-svg .svg-sprite--plane
 {
@@ -4139,24 +4153,10 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -122px -175px;
-    background-size: 331px 297px;
+    background-position: -122px -200px;
+    background-size: 406px 322px;
 }
 .no-svg .svg-sprite--man-icon
-{
-    background-image: url('../img/sprites/svg/svg-sprite.png');
-}
-.svg-sprite--action
-{
-    width: 50px;
-    height: 82px;
-
-    background-image: url('../img/sprites/svg/svg-sprite.svg');
-    background-repeat: no-repeat;
-    background-position: -123px -52px;
-    background-size: 331px 297px;
-}
-.no-svg .svg-sprite--action
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
@@ -4167,8 +4167,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -183px -123px;
-    background-size: 331px 297px;
+    background-position: -283px -123px;
+    background-size: 406px 322px;
 }
 .no-svg .svg-sprite--bubbles
 {
@@ -4181,8 +4181,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -244px -175px;
-    background-size: 331px 297px;
+    background-position: -223px -52px;
+    background-size: 406px 322px;
 }
 .no-svg .svg-sprite--hands
 {
@@ -4195,8 +4195,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -254px -123px;
-    background-size: 331px 297px;
+    background-position: -354px -123px;
+    background-size: 406px 322px;
 }
 .no-svg .svg-sprite--tick
 {
@@ -4209,8 +4209,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -244px -219px;
-    background-size: 331px 297px;
+    background-position: -223px -96px;
+    background-size: 406px 322px;
 }
 .no-svg .svg-sprite--clock
 {
@@ -4223,8 +4223,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -123px -134px;
-    background-size: 331px 297px;
+    background-position: -283px -167px;
+    background-size: 406px 322px;
 }
 .no-svg .svg-sprite--vk-white
 {
@@ -4237,8 +4237,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -148px -134px;
-    background-size: 331px 297px;
+    background-position: -308px -167px;
+    background-size: 406px 322px;
 }
 .no-svg .svg-sprite--fb_blue
 {
@@ -4251,8 +4251,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -244px -263px;
-    background-size: 331px 297px;
+    background-position: -332px -167px;
+    background-size: 406px 322px;
 }
 .no-svg .svg-sprite--vk
 {
@@ -4265,8 +4265,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -306px 0;
-    background-size: 331px 297px;
+    background-position: -223px -140px;
+    background-size: 406px 322px;
 }
 .no-svg .svg-sprite--fb
 {
@@ -4279,8 +4279,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -306px -24px;
-    background-size: 331px 297px;
+    background-position: -267px -96px;
+    background-size: 406px 322px;
 }
 .no-svg .svg-sprite--arrows
 {
@@ -4293,8 +4293,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -306px -48px;
-    background-size: 331px 297px;
+    background-position: -357px -167px;
+    background-size: 406px 322px;
 }
 .no-svg .svg-sprite--cross
 {
@@ -4363,6 +4363,15 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 {
     margin: 0;
 }
+.full-bg,
+#start-banner,
+#slogan-2
+{
+    background-image: url(http://placehold.it/1600x600);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
 /*=======GENERAL========*/
 @font-face
 {
@@ -4387,15 +4396,11 @@ header
     top: 0;
 
     width: 100%;
-    padding-top: 22px;
-
-    text-align: center;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
 
     background-color: transparent;
-}
-header .logo
-{
-    margin: auto;
 }
 header .logo span
 {
@@ -4418,9 +4423,14 @@ header .phone
 {
     header .phone
     {
-        position: initial;
-
-        margin-top: 20px;
+        display: none;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    header
+    {
+        padding: 10px;
     }
 }
 footer
@@ -4455,7 +4465,7 @@ section
 {
     section
     {
-        padding: 0;
+        padding: 10px;
     }
 }
 label
@@ -4664,30 +4674,16 @@ h4
     }
 }
 /*======BLOCKS=======*/
-.backgroung-video
-{
-    position: fixed;
-    z-index: -100;
-    top: 50%;
-    left: 50%;
-
-    width: auto;
-    min-width: 100%;
-    height: auto;
-    min-height: 100%;
-
-    -webkit-transform: translateX(-50%) translateY(-50%);
-        -ms-transform: translateX(-50%) translateY(-50%);
-            transform: translateX(-50%) translateY(-50%);
-}
 #start
 {
+    position: relative;
+
+    color: #fff;
     background-color: transparent;
 }
 #start > div
 {
     width: 100%;
-    height: 100vh;
 
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -4696,6 +4692,15 @@ h4
 #start svg
 {
     overflow: visible;
+}
+#start video
+{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
 }
 #start #slogan-1,
 #start #slogan-2
@@ -4741,6 +4746,7 @@ h4
 #start #pulldown,
 #start #pulldown-arrow
 {
+    font-family: 'Intro';
     font-size: 18px;
     font-weight: 700;
 
@@ -4770,6 +4776,13 @@ h4
         background-size: cover;
     }
 }
+@media screen and (max-width: 768px)
+{
+    #start
+    {
+        display: none;
+    }
+}
 #timetothink
 {
     padding-top: 30px;
@@ -4786,14 +4799,29 @@ h4
 }
 #timetothink > div
 {
-    padding-top: 115px;
-    padding-bottom: 10px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 
     background-color: #fdca00;
 }
+@media screen and (max-width: 768px)
+{
+    #timetothink > div
+    {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
 #timetothink h2
 {
-    margin-bottom: 75px;
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 768px)
+{
+    #timetothink h2
+    {
+        font-size: 20px;
+    }
 }
 #timetothink .image
 {
@@ -4807,12 +4835,28 @@ h4
 {
     margin-bottom: 5px;
 }
-#timetothink .btn
+#timetothink .descr
 {
-    margin-bottom: 75px;
+    max-width: 45%;
+    margin: auto;
+    margin-bottom: 80px;
+}
+@media screen and (max-width: 768px)
+{
+    #timetothink .descr
+    {
+        min-width: 99%;
+        margin-bottom: 50px;
+    }
+}
+#timetothink .any-question .descr
+{
+    margin-bottom: 15px;
 }
 #pluses
 {
+    margin-bottom: 15px;
+
     text-align: center;
 }
 @media screen and (max-width: 768px)
@@ -4853,13 +4897,30 @@ h4
 #pluses .title,
 #pluses .description
 {
-    min-height: 45px;
+    min-height: 65px;
 
     text-align: left;
 }
+@media screen and (max-width: 768px)
+{
+    #pluses .title,
+    #pluses .description
+    {
+        margin: auto;
+
+        text-align: center;
+    }
+}
 #pluses .title
 {
-    text-align: center;
+    max-width: 55%;
+}
+@media screen and (max-width: 768px)
+{
+    #pluses .title
+    {
+        max-width: 100%;
+    }
 }
 @media screen and (max-width: 768px)
 {
@@ -4919,6 +4980,13 @@ h4
 
     text-align: left;
 }
+@media screen and (max-width: 768px)
+{
+    #calculator
+    {
+        margin-bottom: 20px;
+    }
+}
 #calc
 {
     padding-top: 80px;
@@ -4961,6 +5029,11 @@ h4
     {
         display: none;
     }
+}
+#calc .bg-yellow
+{
+    margin-right: -10px;
+    margin-left: -10px;
 }
 @media screen and (max-width: 768px)
 {
@@ -5013,26 +5086,46 @@ h4
 
     display: block;
 }
+#calc .carrot
+{
+    font-size: 16px;
+
+    margin: 15px 0;
+
+    text-align: center;
+}
 #comments
 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
     text-align: center;
+}
+@media screen and (max-width: 768px)
+{
+    #comments
+    {
+        padding: 0;
+    }
 }
 #comments h2
 {
     margin-bottom: 34px;
+
+    color: #fff;
 }
 #comments .block
 {
     padding-top: 60px;
     padding-bottom: 100px;
 
-    background-color: #fdca00;
+    background-color: #44a1d7;
 }
 @media screen and (max-width: 768px)
 {
     #comments .block
     {
-        padding: 30px 0;
+        padding: 50px 0;
     }
 }
 #comments .comment
@@ -5243,7 +5336,7 @@ h4
 {
     padding: 50px 30px 40px;
 
-    background: url(../img/images/photo.jpg);
+    background-image: url(../img/images/photo.jpg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -5255,6 +5348,8 @@ h4
         padding: 30px 0;
 
         text-align: center;
+
+        background-image: none;
     }
     #goahead br
     {
@@ -5481,9 +5576,7 @@ input[type='radio']:checked:after
 }
 .callback-form input
 {
-    width: 250px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    width: 225px;
 
     vertical-align: top;
 
@@ -5514,6 +5607,219 @@ input[type='radio']:checked:after
     letter-spacing: 1px;
 
     border: 2px solid #fdca00;
+}
+/*
+==========================
+MAIN V2.0
+==========================
+*/
+h1 span,
+h2 span,
+h3 span,
+h4 span
+{
+    text-decoration: underline;
+}
+.bg-yellow
+{
+    background-color: #fdca00;
+}
+#start-banner
+{
+    padding-top: 150px;
+    padding-bottom: 30px;
+
+    text-align: left;
+
+    color: #fff;
+}
+#start-banner h2:first-child
+{
+    margin-bottom: 50px;
+}
+@media screen and (max-width: 768px)
+{
+    #start-banner h2:first-child
+    {
+        margin-bottom: 30px;
+    }
+}
+#start-banner .slogan
+{
+    margin-bottom: 30px;
+}
+@media screen and (max-width: 768px)
+{
+    #start-banner .slogan
+    {
+        margin-bottom: 100px;
+    }
+}
+#start-banner .carrot
+{
+    width: 70%;
+    padding: 40px 0 40px 80px;
+
+    color: #322525;
+    background-color: #fdca00;
+}
+#start-banner .carrot h3
+{
+    margin-bottom: 15px;
+    padding-right: 80px;
+}
+@media screen and (max-width: 768px)
+{
+    #start-banner .carrot h3
+    {
+        padding-right: 0;
+    }
+}
+#start-banner .carrot .descr
+{
+    margin-bottom: 15px;
+    padding-right: 80px;
+}
+@media screen and (max-width: 768px)
+{
+    #start-banner .carrot .descr
+    {
+        padding-right: 0;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    #start-banner .carrot
+    {
+        position: absolute;
+
+        width: 100%;
+        margin-right: -10px;
+        margin-left: -10px;
+        padding-right: 10px;
+        padding-left: 10px;
+
+        text-align: center;
+
+        background-color: #fff;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    #start-banner
+    {
+        margin-bottom: 320px;
+        padding-top: 140px;
+    }
+}
+#more-info
+{
+    padding: 40px 0 60px;
+
+    background-color: #fdca00;
+}
+#more-info h3
+{
+    max-width: 40%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 768px)
+{
+    #more-info h3
+    {
+        max-width: 99%;
+    }
+}
+#calc h2
+{
+    color: #322525;
+}
+#calc .bg-yellow
+{
+    padding: 150px 0 150px 80px;
+}
+@media screen and (max-width: 768px)
+{
+    #calc .bg-yellow
+    {
+        padding: 30px 0;
+    }
+}
+#calc .callback-form input
+{
+    width: 200px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+@media screen and (max-width: 768px)
+{
+    #calc form
+    {
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    #calc
+    {
+        padding-bottom: 0;
+    }
+}
+#slogan-2
+{
+    padding: 130px 0 75px;
+
+    color: #fff;
+}
+#slogan-2 h2
+{
+    margin-bottom: 40px;
+}
+@media screen and (max-width: 768px)
+{
+    #slogan-2 h2
+    {
+        margin-bottom: 30px;
+    }
+}
+#slogan-2 h3
+{
+    margin-bottom: 20px;
+}
+#slogan-2 .descr
+{
+    max-width: 50%;
+    margin: auto;
+    margin-bottom: 90px;
+}
+@media screen and (max-width: 768px)
+{
+    #slogan-2 .descr
+    {
+        max-width: 95%;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    #slogan-2
+    {
+        padding: 60px 0 30px;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .socials
+    {
+        margin-top: 15px;
+
+        text-align: center;
+    }
+}
+.socials div
+{
+    display: inline-block;
 }
 .service-page section
 {
@@ -5623,6 +5929,13 @@ input[type='radio']:checked:after
     font-weight: 700;
 
     color: black;
+}
+@media screen and (max-width: 768px)
+{
+    .service-page .price-block .price
+    {
+        font-size: 25px;
+    }
 }
 @media screen and (max-width: 768px)
 {

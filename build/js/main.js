@@ -18106,13 +18106,13 @@ $(document).ready(function() {
     }
 
     this.scrollControl = function (){
-      if($(window).scrollTop() > $(window).height()){
-        $(video).hide();
-        video.pause();
-      } else{
-        $(video).show();
-        restart();
-      }
+      // if($(window).scrollTop() > $(window).height()){
+      //   $(video).hide();
+      //   video.pause();
+      // } else{
+      //   $(video).show();
+      //   restart();
+      // }
     };
 
     function playVideo(){
