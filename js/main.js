@@ -10556,7 +10556,7 @@ Snap.snapTo = function (values, value, tolerance) {
  #     <li>hsl(•••, •••, •••) — hue, saturation and luminosity values: (<code>hsb(0.5,&nbsp;0.25,&nbsp;0.5)</code>)</li>
  #     <li>hsla(•••, •••, •••, •••) — also with opacity</li>
  #     <li>hsl(•••%, •••%, •••%) — same as above, but in %</li>
- #     <li>hsla(•••%, •••%, •••%, •••%) — also with opacity</li>
+ #     <li>hsla(•••%, •���•%, •••%, •••%) — also with opacity</li>
  # </ul>
  * Note that `%` can be used any time: `rgb(20%, 255, 50%)`.
  = (object) RGB object in the following format:
@@ -18298,7 +18298,8 @@ $(document).ready(function() {
     var radios = form.find("input[type='radio']"),
         result = form.find("#result");
     
-    var relations = ["<span>7 500 Р.</span> в месяц","<span>15 000 Р.</span> в месяц","<span>25 000 Р.</span> в месяц","<span>35 000 Р.</span> в месяц","<span>50 000 Р.</span> в месяц","<span>ОБСУДИМ!</span> &nbsp;","<span>45 000 Р.</span> в месяц"];
+    // var relations = ["<span>7 500 Р.</span> в месяц","<span>15 000 Р.</span> в месяц","<span>25 000 Р.</span> в месяц","<span>35 000 Р.</span> в месяц","<span>50 000 Р.</span> в месяц","<span>ОБСУДИМ!</span> &nbsp;","<span>45 000 Р.</span> в месяц"];
+    var relations = ["Последующие <span>7 500 Р.</span>","Последующие  <span>15 000 Р.</span>","Последующие  <span>25 000 Р.</span>","Последующие  <span>35 000 Р.</span>","Последующие  <span>50 000 Р.</span>","<span>ОБСУДИМ!</span> &nbsp;","<span>45 000 Р.</span> в месяц"];
 
     function calculate(){
       result.html(relations[parseInt($(this).val())]);
