@@ -389,7 +389,8 @@ $(document).ready(function() {
     var radios = form.find("input[type='radio']"),
         result = form.find("#result");
     
-    var relations = ["<span>7 500 Р.</span> в месяц","<span>15 000 Р.</span> в месяц","<span>25 000 Р.</span> в месяц","<span>35 000 Р.</span> в месяц","<span>50 000 Р.</span> в месяц","<span>ОБСУДИМ!</span> &nbsp;","<span>45 000 Р.</span> в месяц"];
+    // var relations = ["<span>7 500 Р.</span> в месяц","<span>15 000 Р.</span> в месяц","<span>25 000 Р.</span> в месяц","<span>35 000 Р.</span> в месяц","<span>50 000 Р.</span> в месяц","<span>ОБСУДИМ!</span> &nbsp;","<span>45 000 Р.</span> в месяц"];
+    var relations = ["Последующие <span>7 500 Р.</span>","Последующие  <span>15 000 Р.</span>","Последующие  <span>25 000 Р.</span>","Последующие  <span>35 000 Р.</span>","Последующие  <span>50 000 Р.</span>","<span>ОБСУДИМ!</span> &nbsp;","<span>45 000 Р.</span> в месяц"];
 
     function calculate(){
       result.html(relations[parseInt($(this).val())]);
