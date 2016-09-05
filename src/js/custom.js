@@ -161,16 +161,17 @@ $(document).ready(function() {
     function scrollDown(){
       // console.log("scrollDown");
       video.currentTime = 0;
-      $(video).hide();
-      if($(window).scrollTop() < 10){
-        $("html, body").animate({
-          scrollTop: $(window).height()
-        },750, restart);
-      }
+      // $(video).hide();
+      // if($(window).scrollTop() < 10){
+      //   $("html, body").animate({
+      //     scrollTop: $(window).height()
+      //   },750, restart);
+      // }
       // $("body").removeClass("noscroll");
       tonner.css({
         opacity: 1
       });
+      restart();
     }
 
     function restart(){
@@ -188,8 +189,8 @@ $(document).ready(function() {
     function returnToStart(){
       var dur = 300;
       line.animate({
-        x2: -255,
-        y2: 423
+        x2: 25,
+        y2: 66
       },dur,mina.elastic);
       ring.animate({
         transform: new Snap.Matrix()
@@ -239,6 +240,7 @@ $(document).ready(function() {
         // }
       };
       self.start = function() {
+        console.log("ring drug start");
         this.data('origTransform', this.transform().local );
         startBBox = this.getBBox();
         yaCounter38125720.reachGoal('Кнопка №10');
@@ -404,7 +406,7 @@ $(document).ready(function() {
   // var anim_on_scroll = new AnimOnScroll();
   var full_height = new FullHeight();
   var video_play = new videoPlayOnDrag();
-  var econtenta_pixel = new initEcontentaEvent();
+  // var econtenta_pixel = new initEcontentaEvent();
   /*
   =====================================
   INIT WINDOW UPDATER
@@ -417,7 +419,7 @@ $(document).ready(function() {
       actions: [
         // anim_on_scroll.updateView,
         video_play.scrollControl,
-        econtenta_pixel.checkScrollConditions
+        // econtenta_pixel.checkScrollConditions
       ]
     },
     {

@@ -106,7 +106,7 @@ input{
   position: absolute;
   height: 100%;
   background-color: rgba(68, 161, 215, 0.59);
-  z-index: -1;
+  z-index: 999;
 }
 .nopadding{
   padding: 0;
@@ -248,41 +248,60 @@ h4{
   }
   video{
     width: 100%;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // z-index: -1;
+  }
+  .active-layer{
     position: absolute;
     top: 0;
+    bottom: 0;
+    right: 0;
     left: 0;
-    z-index: -1;
+    margin: auto;
+    max-height: 300px;
+    max-width: 800px;
+    display: inline-block;
   }
   #slogan-1,#slogan-2{
     // color: white;
     position: relative;
     opacity: 0;
     transition: all 500ms;
-    top: 100px;
-    z-index: -1;
+    z-index: 1000;
+    // top: 100px;
+    // padding-top: 100px;
+    // z-index: -1;
     &.visible{
       opacity: 1;
       top: 0;
-      z-index: initial;
+      // z-index: initial;
     }
   }
-  #slogan-2{
-    color: white;
-    @media screen and (max-width: @mobile){
-      display: block;
-      opacity: 1;
-      top: 0;
-      z-index: auto;
-      font-size: 18px;
-      color: @black;
-      margin-top: 20px;
-    }
-  }
+  // #slogan-2{
+  //   color: white;
+  //   @media screen and (max-width: @mobile){
+  //     display: block;
+  //     opacity: 1;
+  //     top: 0;
+  //     z-index: auto;
+  //     font-size: 18px;
+  //     color: @black;
+  //     margin-top: 20px;
+  //   }
+  // }
   #pulldown,#pulldown-arrow{
     font-family: 'Intro';
     transition: all 500ms;
     font-size: 18px;
     font-weight: 700;
+    position: relative;
+    z-index: 1000;
+  }
+  #start-animation{
+    position: relative;
+    z-index: 1000;
   }
   #pulldown,#start-animation, #start-video{
     @media screen and (max-width: @mobile){
@@ -514,6 +533,10 @@ h4{
     font-size: 16px;
     text-align: center;
     margin: 15px 0;
+    text-align: left;
+    @media screen and (max-width: @mobile){
+      text-align: center;
+    }
   }
   // .btn{
   //   margin-top: 20px;
@@ -875,6 +898,7 @@ h1,h2,h3,h4{
   padding-bottom: 30px;
   color: #fff;
   &:extend(.full-bg);
+  background-image: url(../img/images/surfer-hd.jpg);
   h2:first-child{
     margin-bottom: 50px;
     @media screen and (max-width: @mobile){
@@ -921,6 +945,7 @@ h1,h2,h3,h4{
     padding-top: 140px;
     // padding-bottom: 100px;
     margin-bottom: 320px;
+    background-image: url(../img/images/surfer.jpg);
   }
 }
 #more-info{
@@ -964,6 +989,7 @@ h1,h2,h3,h4{
 }
 #slogan-2{
   &:extend(.full-bg);
+  background-image: url(../img/images/room-hd.jpg);
   padding: 130px 0 75px;
   color: #fff;
   h2{
@@ -986,6 +1012,7 @@ h1,h2,h3,h4{
   }
   @media screen and (max-width: @mobile){
     padding: 60px 0 30px;
+    background-image: url(../img/images/room.jpg);
   }
 }
 .socials{
