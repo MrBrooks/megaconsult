@@ -5926,7 +5926,7 @@ h2
     padding: 140px 0 190px;
 
     color: white;
-    background-image: url(http://placehold.it/1920x800);
+    background-color: #44a1d7;
 }
 .service-page .start-block .descr
 {
@@ -5979,7 +5979,7 @@ h2
 {
     padding: 165px 0 210px;
 
-    background-image: url(http://placehold.it/1920x800);
+    background-image: url(../img/images/gendir_hd.jpg);
 }
 .service-page .consultation-block h2
 {
@@ -5990,6 +5990,8 @@ h2
     .service-page .consultation-block
     {
         padding: 100px 0;
+
+        background-image: url(../img/images/gendir.jpg);
     }
 }
 .service-page .meeting1-block
@@ -6064,7 +6066,7 @@ h2
 {
     padding: 140px 0 170px;
 
-    background-image: url(http://placehold.it/1920x800);
+    background-color: #44a1d7;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
