@@ -5932,6 +5932,10 @@ h2
 {
     text-align: center;
 }
+.service-page .start-block h1
+{
+    color: #fff;
+}
 @media screen and (max-width: 768px)
 {
     .service-page .start-block
@@ -6083,6 +6087,7 @@ h2
     margin-bottom: 30px;
 
     color: #fdca00;
+    color: #fff;
 }
 .service-page .slogan-block .descr
 {
