@@ -31,6 +31,7 @@ header{
   padding-top: 30px;
   padding-left: 30px;
   padding-right: 30px;
+  z-index: 1001;
   .logo{
     // margin: auto;
     span{
@@ -46,9 +47,10 @@ header{
     font-family: "Intro";
     color: #fff;
     @media screen and (max-width: @mobile){
-      // position: initial;
-      // margin-top: 20px;
-      display: none;
+      position: initial;
+      margin-top: 20px;
+      // display: none;
+
     }
   }
   @media screen and (max-width: @mobile){
@@ -887,7 +889,7 @@ input[type="radio"]{
   }
   input[type="submit"]{
     @media screen and (max-width: @mobile){
-      margin-top: 15px;
+      // margin-top: 15px;
     }
   }
   input[type="text"]{
@@ -898,6 +900,10 @@ input[type="radio"]{
     padding-right: 25px;
     letter-spacing: 1px;
   }
+}
+input{
+  max-width: 300px;
+  margin: auto;
 }
 
 /*
@@ -925,10 +931,20 @@ h2{
   &:extend(.full-bg);
   background-image: url(../img/images/surfer-hd.jpg);
   background-attachment: fixed;
+  h2{
+    @media screen and (max-width: @mobile){
+      padding-bottom: 50px;
+    }
+  }
   h2:first-child{
+    margin-top: 50px;
     margin-bottom: 50px;
     @media screen and (max-width: @mobile){
       margin-bottom: 30px;
+      // margin-top: 15px;
+      margin: 0;
+      padding-bottom: 30px;
+      padding-top: 150px;
     }
   }
   .slogan{
@@ -937,20 +953,40 @@ h2{
       margin-bottom: 100px;
     }
   }
+  .slogans{
+    @media screen and (max-width: @mobile){
+      &:extend(.full-bg);
+      background-image: url(../img/images/surfer.jpg);
+    }
+  }
+  .callback-form{
+    input[type="submit"]{
+      margin-top: 0;
+    }
+    @media screen and (max-width: @mobile){
+      input[name='phone']{
+        margin-bottom: 10px;
+      }
+    }
+  }
   .carrot{
     background-color: @yellow;
     color: @black;
-    width: 70%;
-    padding: 40px 0 40px 80px;
+    // width: 70%;
+    padding: 45px 40px;
     h3{
-      margin-bottom: 15px;
-      padding-right: 80px;
+      margin-bottom: 60px;
+      // padding-right: 80px;
+      font-size: 24px;
       @media screen and (max-width: @mobile){
         padding-right: 0;
       }
     }
-    .descr{
+    h4{
       margin-bottom: 15px;
+    }
+    .descr{
+      margin-bottom: 30px;
       padding-right: 80px;
       @media screen and (max-width: @mobile){
         padding-right: 0;
@@ -958,20 +994,21 @@ h2{
     }
     @media screen and (max-width: @mobile){
       width: 100%;
-      margin-left: -10px;
-      margin-right: -10px;
-      position: absolute;
+      // margin-left: -10px;
+      // margin-right: -10px;
+      // position: absolute;
       text-align: center;
       background-color: #fff;
-      padding-left: 10px;
-      padding-right: 10px;
+      // padding-left: 10px;
+      // padding-right: 10px;
     }
   }
   @media screen and (max-width: @mobile){
-    padding-top: 140px;
+    // padding-top: 140px;
+    padding: 0;
     // padding-bottom: 100px;
-    margin-bottom: 320px;
-    background-image: url(../img/images/surfer.jpg);
+    // margin-bottom: 320px;
+    background-image: none;
   }
 }
 #more-info{
