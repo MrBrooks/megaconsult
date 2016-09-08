@@ -4379,6 +4379,7 @@ body
 header
 {
     position: absolute;
+    z-index: 1001;
     top: 0;
 
     width: 100%;
@@ -4409,7 +4410,9 @@ header .phone
 {
     header .phone
     {
-        display: none;
+        position: initial;
+
+        margin-top: 20px;
     }
 }
 @media screen and (max-width: 768px)
@@ -5608,13 +5611,6 @@ input[type='radio']:checked:after
         margin-bottom: 15px;
     }
 }
-@media screen and (max-width: 768px)
-{
-    .callback-form input[type='submit']
-    {
-        margin-top: 15px;
-    }
-}
 .callback-form input[type='text']
 {
     font-size: 15px;
@@ -5626,6 +5622,11 @@ input[type='radio']:checked:after
     letter-spacing: 1px;
 
     border: 2px solid #fdca00;
+}
+input
+{
+    max-width: 300px;
+    margin: auto;
 }
 /*
 ==========================
@@ -5659,15 +5660,26 @@ h2
     background-image: url(../img/images/surfer-hd.jpg);
     background-attachment: fixed;
 }
+@media screen and (max-width: 768px)
+{
+    #start-banner h2
+    {
+        padding-bottom: 50px;
+    }
+}
 #start-banner h2:first-child
 {
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 @media screen and (max-width: 768px)
 {
     #start-banner h2:first-child
     {
+        margin: 0;
         margin-bottom: 30px;
+        padding-top: 150px;
+        padding-bottom: 30px;
     }
 }
 #start-banner .slogan
@@ -5681,18 +5693,36 @@ h2
         margin-bottom: 100px;
     }
 }
+@media screen and (max-width: 768px)
+{
+    #start-banner .slogans
+    {
+        background-image: url(../img/images/surfer.jpg);
+    }
+}
+#start-banner .callback-form input[type='submit']
+{
+    margin-top: 0;
+}
+@media screen and (max-width: 768px)
+{
+    #start-banner .callback-form input[name='phone']
+    {
+        margin-bottom: 10px;
+    }
+}
 #start-banner .carrot
 {
-    width: 70%;
-    padding: 40px 0 40px 80px;
+    padding: 45px 40px;
 
     color: #322525;
     background-color: #fdca00;
 }
 #start-banner .carrot h3
 {
-    margin-bottom: 15px;
-    padding-right: 80px;
+    font-size: 24px;
+
+    margin-bottom: 60px;
 }
 @media screen and (max-width: 768px)
 {
@@ -5701,9 +5731,13 @@ h2
         padding-right: 0;
     }
 }
-#start-banner .carrot .descr
+#start-banner .carrot h4
 {
     margin-bottom: 15px;
+}
+#start-banner .carrot .descr
+{
+    margin-bottom: 30px;
     padding-right: 80px;
 }
 @media screen and (max-width: 768px)
@@ -5717,13 +5751,7 @@ h2
 {
     #start-banner .carrot
     {
-        position: absolute;
-
         width: 100%;
-        margin-right: -10px;
-        margin-left: -10px;
-        padding-right: 10px;
-        padding-left: 10px;
 
         text-align: center;
 
@@ -5734,10 +5762,9 @@ h2
 {
     #start-banner
     {
-        margin-bottom: 320px;
-        padding-top: 140px;
+        padding: 0;
 
-        background-image: url(../img/images/surfer.jpg);
+        background-image: none;
     }
 }
 #more-info
@@ -6217,6 +6244,10 @@ h2
 {
     margin-bottom: 20px;
 }
+.bgcw
+{
+    background-color: #fff;
+}
 footer
 {
     color: #545454;
@@ -6226,4 +6257,62 @@ footer .phone,
 footer .email
 {
     font-weight: 700;
+}
+#services-block
+{
+    padding: 45px 30px 110px;
+}
+#services-block h2
+{
+    margin-bottom: 40px;
+
+    color: #44a1d7;
+}
+#services-block .descr
+{
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 60px;
+}
+#services-block ul
+{
+    margin: 0;
+    padding-left: 0;
+
+    list-style-type: none;
+}
+#services-block li
+{
+    margin-bottom: 40px;
+    padding-right: 30px;
+
+    text-align: left;
+}
+#services-block h3
+{
+    min-height: 85px;
+    margin-bottom: 40px;
+    padding-right: 30px;
+
+    text-align: left;
+}
+#services-block a
+{
+    text-decoration: none;
+}
+/*
+MAIN SITE STYLES
+*/
+a
+{
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: none;
+}
+.decision-ul li .h3
+{
+    text-align: left;
+    text-decoration: none;
 }
