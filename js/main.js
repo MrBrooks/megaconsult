@@ -10556,7 +10556,7 @@ Snap.snapTo = function (values, value, tolerance) {
  #     <li>hsl(•••, •••, •••) — hue, saturation and luminosity values: (<code>hsb(0.5,&nbsp;0.25,&nbsp;0.5)</code>)</li>
  #     <li>hsla(•••, •••, •••, •••) — also with opacity</li>
  #     <li>hsl(•••%, •••%, •••%) — same as above, but in %</li>
- #     <li>hsla(•••%, •���•%, •••%, •••%) — also with opacity</li>
+ #     <li>hsla(•••%, •••%, •••%, •••%) — also with opacity</li>
  # </ul>
  * Note that `%` can be used any time: `rgb(20%, 255, 50%)`.
  = (object) RGB object in the following format:
@@ -18138,7 +18138,7 @@ $(document).ready(function() {
         // if(d < 20){
           slogan1.css({
             opacity: Math.max(1 - d/18, 0),
-            top: 100*Math.max(d/18, 0)
+            // top: 100*Math.max(d/18, 0)
           });
           tonner.css({
             opacity: Math.max(1 - d/18, 0)
