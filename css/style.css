@@ -4118,7 +4118,7 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
-.svg-sprite--man-icon
+.svg-sprite--plane
 {
     width: 122px;
     height: 122px;
@@ -4128,11 +4128,11 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
     background-position: 0 -175px;
     background-size: 306px 297px;
 }
-.no-svg .svg-sprite--man-icon
+.no-svg .svg-sprite--plane
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
-.svg-sprite--plane
+.svg-sprite--man-icon
 {
     width: 122px;
     height: 122px;
@@ -4142,7 +4142,7 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
     background-position: -122px -175px;
     background-size: 306px 297px;
 }
-.no-svg .svg-sprite--plane
+.no-svg .svg-sprite--man-icon
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
@@ -4202,6 +4202,34 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
+.svg-sprite--vk-big
+{
+    width: 31px;
+    height: 30px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: -123px -140px;
+    background-size: 306px 297px;
+}
+.no-svg .svg-sprite--vk-big
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
+.svg-sprite--fb-big
+{
+    width: 31px;
+    height: 30px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: -244px -175px;
+    background-size: 306px 297px;
+}
+.no-svg .svg-sprite--fb-big
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
 .svg-sprite--vk-white
 {
     width: 25px;
@@ -4209,24 +4237,10 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -123px -140px;
+    background-position: -154px -140px;
     background-size: 306px 297px;
 }
 .no-svg .svg-sprite--vk-white
-{
-    background-image: url('../img/sprites/svg/svg-sprite.png');
-}
-.svg-sprite--fb_blue
-{
-    width: 25px;
-    height: 24px;
-
-    background-image: url('../img/sprites/svg/svg-sprite.svg');
-    background-repeat: no-repeat;
-    background-position: -148px -140px;
-    background-size: 306px 297px;
-}
-.no-svg .svg-sprite--fb_blue
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
@@ -4237,10 +4251,24 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -244px -175px;
+    background-position: -275px -175px;
     background-size: 306px 297px;
 }
 .no-svg .svg-sprite--vk
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
+.svg-sprite--fb_blue
+{
+    width: 25px;
+    height: 24px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: -244px -205px;
+    background-size: 306px 297px;
+}
+.no-svg .svg-sprite--fb_blue
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
@@ -4251,7 +4279,7 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -244px -199px;
+    background-position: -244px -229px;
     background-size: 306px 297px;
 }
 .no-svg .svg-sprite--fb
@@ -4279,7 +4307,7 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -269px -175px;
+    background-position: -269px -205px;
     background-size: 306px 297px;
 }
 .no-svg .svg-sprite--cross
@@ -4414,6 +4442,14 @@ header .phone
 
         margin-top: 20px;
     }
+}
+header .phone span
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+
+    display: block;
 }
 @media screen and (max-width: 768px)
 {
@@ -5878,6 +5914,28 @@ h2
 .socials div
 {
     display: inline-block;
+}
+#subscribe-form
+{
+    text-align: left;
+}
+#subscribe-form input[type='email']
+{
+    margin: 0;
+}
+@media screen and (max-width: 768px)
+{
+    #subscribe-form input[type='email']
+    {
+        margin: auto;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    #subscribe-form
+    {
+        text-align: center;
+    }
 }
 .service-page section
 {
