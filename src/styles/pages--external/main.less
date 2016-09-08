@@ -52,6 +52,12 @@ header{
       // display: none;
 
     }
+    span{
+      display: block;
+      font-size: 16px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+    }
   }
   @media screen and (max-width: @mobile){
     padding: 10px;
@@ -1087,4 +1093,17 @@ h2{
   div{
     display: inline-block;
   }
+}
+#subscribe-form{
+  text-align: left;
+  input[type="email"]{
+    margin: 0;
+    @media screen and (max-width: @mobile){
+      margin: auto;
+    }
+  }
+  @media screen and (max-width: @mobile){
+    text-align: center;
+  }
+
 }
