@@ -229,7 +229,7 @@ $(document).ready(function() {
         // if(d < 20){
           slogan1.css({
             opacity: Math.max(1 - d/18, 0),
-            top: 100*Math.max(d/18, 0)
+            // top: 100*Math.max(d/18, 0)
           });
           tonner.css({
             opacity: Math.max(1 - d/18, 0)
